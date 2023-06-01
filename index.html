@@ -20,23 +20,28 @@
     <div class="window">
         <div class="title-bar">
           <div class="title-bar-text">
-            My First Program
+            Who Are You?
           </div>
-  
+
           <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
+            <!-- 버튼 클릭 시 화면 작게 하기 -->
+            <button aria-label="Help"></button>
+      
+            <!-- no기능 -->
             <button aria-label="Close"></button>
           </div>
         </div>
 
         <!-- 창 내부 -->
         <div class="window-body">
-          <p>안녕</p>
-          <section class="field-row" style="justify-content: flex-end;">
+          <span class="window-check">Please Enter Your Name</span>
+          <input class="window_name_input" type="text" placeholder="...">
+          <button class="window_body_btn">OK</button>
+          <!-- 버튼 -->
+          <!-- <section class="field-row" >
             <button>OK</button>
             <button>Cancel</button>
-          </section>
+          </section> -->
         </div>
       </div>
     
