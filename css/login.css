@@ -10,6 +10,7 @@
 
 .login {
   width: 100%;
+  transition: hidden 3s ease-in-out;
 }
 
 .login-screen {
@@ -75,8 +76,12 @@
   
   .window-body {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    overflow: none;
+  }
+  
+  .window-body1 {
+    display: flex;
     flex-direction: column;
   }
   
@@ -282,4 +287,14 @@
     color: #00489a;
     font-size: 14px;
     font-weight: bold;
+  }
+
+  .window_body_btn {
+    margin-top: 5px;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
+  }
+
+  .window-check {
+    margin-bottom: 5px;
   }

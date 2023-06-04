@@ -181,6 +181,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: auto;
   }
 
   #todo-list {
@@ -227,5 +228,6 @@ body {
 }
 
 .window-body {
-  height: 500px;
+  height: 440px;
+  overflow: auto;
 }
