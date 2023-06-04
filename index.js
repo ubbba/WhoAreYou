@@ -1,63 +1,64 @@
-// 물음표 클릭 시 모달창
-      const body = document.querySelector('body');
-      const modal = document.querySelector('.modal');
-      const btnOpenPopup = document.querySelector('.btn-open-popup');
+const btn = document.getElementById('popupBtn');
+const modal = document.getElementById('modalWrap');
+const closeBtn = document.getElementById('closeBtn');
 
-      btnOpenPopup.addEventListener('click', () => {
-        modal.classList.toggle('show');
+const fbtn = document.querySelector("#folderBtn");
+const fmodal = document.querySelector("#folderWrap");
+const fcloseBtn = document.getElementById('fcloseBtn');
 
-        if (modal.classList.contains('show')) {
-          body.style.overflow = 'hidden';
-        }
-      });
 
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.classList.toggle('show');
+btn.onclick = function() {
+  modal.style.display = 'block';
+}
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
 
-          if (!modal.classList.contains('show')) {
-            body.style.overflow = 'auto';
-          }
-        }
-      });
-    
+fbtn.onclick = function() {
+  fmodal.style.display = 'block';
+}
+fcloseBtn.onclick = function() {
+  fmodal.style.display = 'none';
+}
 
-      // 로그인 시 로그인 창 없애고 메인 화면 보이게하기
-      const loginForm = document.querySelector("#login-form");
-      const loginInput = document.querySelector("#login-form input");
-      const greeting = document.querySelector("#greeting");
-      const titleBar = document.querySelector(".title-bar");
-      
-      
-      function btnClick(event) {
-          // 새로고침하는 기본 동작 막기
-          event.preventDefault();
-          // submit버튼을 눌렀을 때 디스플레이 none되는 클래스 추가와 삭제
-          const username= loginInput.value;
-          loginForm.classList.add("hidden");
-          titleBar.classList.add("hidden");
-          localStorage.setItem("id",username);
-          paintgreet(username);
-      }
-      
-          // 로그인을 하게 된 이름을 가지고 인삿말 나타내기(greeting의 히든 클래스 삭제)
-      function paintgreet(username) {
-          greeting.innerText = `Hello ${username}`;
-          greeting.classList.remove("hidden");
-      }
-      
-      // id의 값들을 가져오기
-      const saveUser= localStorage.getItem("id");
-      
-      
-      if(saveUser === null) {
-          // 폼 보여주기
-      loginForm.classList.remove("hidden");
-      titleBar.classList.remove("hidden");
-      
-          loginForm.addEventListener("submit",btnClick);
-      } else {
-          // 유저가 있다면 폼 없애기
-          paintgreet(saveUser);
-      }
-      
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+const login = document.querySelector(".login");
+const main = document.querySelector(".main-all");
+const back = document.querySelector(".bottom_start");
+
+
+
+
+function btnClick(event) {
+    // 새로고침하는 기본 동작 막기
+    const username= loginInput.value;
+    event.preventDefault();
+    // submit버튼을 눌렀을 때 디스플레이 none되는 클래스 추가와 삭제
+    login.classList.add("hidden");
+    localStorage.setItem("id",username);
+    paintgreet(username);
+}
+
+  // 로그인을 하게 된 이름을 가지고 인삿말 나타내기(greeting의 히든 클래스 삭제)
+function paintgreet(username) {
+    greeting.innerText = `Hello ${username}`;
+    main.classList.remove("hidden");
+}
+
+// id의 값들을 가져오기
+const saveUser= localStorage.getItem("id");
+
+if(saveUser === null) {
+    // 폼 보여주기
+    login.classList.remove("hidden");
+    main.classList.add("hidden");
+    loginForm.addEventListener("submit",btnClick);
+} else {
+    // 유저가 있다면 폼 없애기
+    login.classList.add("hidden");
+    paintgreet(saveUser);
+}
+

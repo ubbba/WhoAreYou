@@ -13,27 +13,21 @@
     <style>
       body {
         background-image: url('img/bg.jpg');
-        background-position: center center;
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        overflow: hidden;
-        height: 100vh;
+
       }
     </style>
 </head>
 <body>
-    <!-- 로그인 후 화면 -->
 
-    <div id="greeting" class="hidden">
-      <h1>Hello</h1>
-      
-    </div>
 
     <!-- 로그인 모달창 느낌 내기 -->
     <!-- 창 외부 -->
-    
+    <div id="login">
     <div class="window">
-        <div class="title-bar hidden">
+        <div class="title-bar">
           <div class="title-bar-text">
             Who Are You?
           </div>
@@ -47,7 +41,7 @@
         </div>
 
         <!-- 창 내부 -->
-      <form id="login-form" class="hidden">
+      <form id="login-form" action="main.html" method="GET">
         <div class="window-body">
           <span class="window-check">Please Enter Your Name</span>
           <input class="window_name_input text" type="text" placeholder="..." maxlength="10" id="" required />
@@ -56,21 +50,10 @@
       </form>
 
       </div>
-
-      <!-- 모달 -->
-      <div class="modal">
-        <div class="modal_body">
-          <img src="img/window.png">
-          <span class="span_first">Hello! Welcome to 1998!</span>
-          <span class="span_title">System</span>
-          <span>Microft Window XP</span>
-          <span>This is UBBA</span>
-          <span>Version 1998</span>
-          <span>Service Pack 3</span>
-        </div>
-      </div>
+    </div>
     
-      <script src="index.js">
-      </script>
+      <script src="index.js"></script>
+      <script src="clcok.js"></script>
+      <script src="todo.js"></script>
 </body>
 </html>

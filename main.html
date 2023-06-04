@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css@/dist/98.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Who Are You</title>
+    <style>
+      body {
+        background-image: url('img/bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+       position: relative;
+        z-index: 0;
+      }
+    </style>
+</head>
+<body>
+
+  <!-- 로그인 화면 -->
+  <div class="login">
+  <div class="login-screen">
+    <div class="login-screen__top"></div>
+
+    <div class="login-screen__center">
+      <div class="login-screen__instructions">
+        <img src="img/window.png" />
+
+      </div>
+
+      <div class="login-screen__accounts">
+        <div tabindex="-1" class="login-screen__account">
+          <div class="login-screen__account-icon">
+            <img src="img/3.jpg"  />
+          </div>
+          <div class="login-screen__account-details">
+            <form id="login-form" >
+              <div class="window-body">
+                <span class="window-check">To begin, click your user name</span>
+                <input class="window_name_input text" type="text" placeholder="..." maxlength="10" id="" required />
+                <button class="window_body_btn" type="submit">OK</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 아래 화면 -->
+    <div class="login-screen__bottom">
+      <div class="login-screen__turn-off">
+        <button class="login-screen__turn-off-icon"></button> <span>Turn off computer</span>
+      </div>
+      <div class="login-screen__login-info">
+        <span
+          >After you log on, you can add or change accounts.<br />Just go to Control Panel and
+          click User Accounts.</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- 로그인 후 화면 -->
+    <div class="main-all hidden" >
+      <div class="top_icon">
+        <div class="top_icon_group">
+      <img src="img/computer.png" id="folderBtn" class="top_icon_folder">
+      <span class="top_icon_span">My Info</span>
+    </div>
+
+    <div class="top_icon_group" >
+      <img src="img/folder.png" id="popupBtn" class="top_icon_folder">
+      <span class="top_icon_span">TO-DO-LIST</span>
+    </div>
+
+    <div class="top_icon_group">
+      <a href="https://github.com/ubbba" target="_blank">
+      <img src="img/internet.png" class="top_icon_folder">
+      </a>
+      <span class="top_icon_span">Github</span>
+    </div>
+    </div>
+
+
+     <!-- TO-DO-LIST 클릭 시 모달창 -->
+     <div id="modalWrap">
+   <div class="window" id="modalBody">
+      <div class="title-bar">
+        <div class="title-bar-text">TO-DO-LIST</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" id="closeBtn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+
+        <div class="field-row">
+          <label for="text21" class="todo-label">How ya doin?</label>
+          <form id="todo-form">
+          <input id="text21" type="text" required/>
+          </form>
+          <ul id="todo-list">
+    
+          </ul>
+        </div>
+
+      </div>
+    </div> 
+  </div>
+
+
+  <!-- MY INFO 클릭 시 모달창 -->
+  <div id="folderWrap">
+    <div class="window" id="modalBody">
+      <div class="title-bar">
+        <div class="title-bar-text">MY INFO</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" id="fcloseBtn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+    <h3 id="greeting"></h3>
+    <ul>
+        <li>A Task Manager</li>
+        <li>A Notepad</li>
+        <li>Or even a File Explorer!</li>
+    </ul>
+      </div>
+      <div class="status-bar">
+        <p class="status-bar-field">Press F1 for help</p>
+        <p class="status-bar-field">Slide 1</p>
+        <p class="status-bar-field">CPU Usage: 14%</p>
+      </div>
+    </div>
+   </div>
+
+
+      
+      <!-- 맨 아래에 윈도우 표시와 시간 표시 -->
+      <div>
+
+        <a href="#">
+      <div class="bottom_start">
+        <img src="img/windows.png" >
+        <span>Start</span>
+      </div>
+    </a>
+
+      <div class="bottom_icon">
+      </div>
+
+      <div class="bottom_clock">
+        <span id="clock">00:00</span>
+        <SPAN> PM</SPAN>
+      </div>
+
+    </div>
+      
+
+      <!-- <a href="login.html"><h1>Hello</h1></a> -->
+
+
+    </div>
+
+
+
+
+      <script src="index.js"></script>
+      <script src="clcok.js"></script>
+      <script src="todo.js"></script>
+</body>
+</html>
