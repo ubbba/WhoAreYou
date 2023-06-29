@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@400&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Foldit:wght@400&family=Permanent+Marker&family=Shadows+Into+Light&display=swap");
 
 * {
-    /* font-family: 'Rubik Puddles', cursive; */
-    font-family: 'Permanent Marker', cursive;
-    box-sizing: border-box;
-    
-} 
+  /* font-family: 'Rubik Puddles', cursive; */
+  font-family: "Permanent Marker", cursive;
+  box-sizing: border-box;
+}
 
 .login {
   width: 100%;
@@ -14,287 +13,341 @@
 }
 
 .login-screen {
-    width: 100vw;
-    height: 100vh;
-    background-color: #508fd9;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-  }
-  .login-screen__top, .login-screen__bottom {
-    background-color: #004da3;
-    flex-basis: 12.5%;
-    border-style: solid;
-    border-image-slice: 1;
-  }
-  .login-screen__top {
-    border-image-source: linear-gradient(90deg, #004da3 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.9) 50%, #004da3 100%);
-    border-width: 0 0 4px 0;
-  }
-  .login-screen__bottom {
-    padding: 40px 80px 40px 40px;
-    display: flex;
-    justify-content: space-between;
-    border-image-source: linear-gradient(90deg, #004da3 0%, #f09644 30%, #f09644 40%, #f09644 50%, #004da3 100%);
-    border-width: 4px 0 0 0;
-  }
-  .login-screen__center {
-    flex: 1;
-    display: flex;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.6) -21%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-    background-size: 700px 700px;
-    background-position: -240px -210px;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-  .login-screen__instructions, .login-screen__accounts {
-    flex-basis: 50%;
-  }
-  .login-screen__instructions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 30px;
-    align-items: center;
-    border-right-width: 1px;
-    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 85%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 0) 100%);
-    border-image-slice: 0 1 0 0;
-    border-right-style: solid;
-  }
-  .login-screen__instructions img,
-  .login-screen__instructions span {
-    display: block;
-  }
-  .login-screen__instructions img {
-    width: 250px;
-    
-  }
-  .login-screen__instructions span {
-    text-align: center;
-    font-size: 20px;
-  }
-  
-  .window-body {
-    display: flex;
-    flex-direction: column;
-    overflow: none;
-  }
-  
-  .window-body1 {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-screen__accounts {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .login-screen__account {
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    min-width: 400px;
-    max-width: 100%;
-    opacity: 0.6;
-    padding: 12px;
-    border-radius: 8px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border: 1px solid transparent;
-    border-right: 0;
-    position: relative;
-    background-clip: padding-box;
-    border: 1px solid transparent;
-  }
-  .login-screen__account-icon {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-    border: 3px solid #fff;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-  }
-  .login-screen__account-icon img {
-    width: 100%;
-    height: 100%;
-  }
-  .login-screen__account-details {
-    position: relative;
-  }
-  .login-screen__account-name {
-    font-size: 24px;
-    margin-bottom: 20px;
-    display: block;
-  }
-  .login-screen__account:hover, .login-screen__account.active, .login-screen__account.logging-in {
-    opacity: 1;
-  }
-  .login-screen__account:hover .login-screen__account-icon, .login-screen__account.active .login-screen__account-icon, .login-screen__account.logging-in .login-screen__account-icon {
-    border-color: #ffcc36;
-  }
-  .login-screen__account:hover .login-screen__account-name, .login-screen__account.active .login-screen__account-name, .login-screen__account.logging-in .login-screen__account-name {
-    margin-bottom: 2px;
-  }
-  .login-screen__account.active {
-    cursor: pointer;
-    background: linear-gradient(90deg, #00489a 60%, rgba(255, 255, 255, 0) 100%);
-    background-clip: padding-box;
-  }
-  .login-screen__account.active::after {
-    content: "";
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0) 100%);
-    border-radius: 8px;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    z-index: -1;
-    pointer-events: none;
-  }
-  .login-screen__account.active .login-screen__password {
-    display: block;
-  }
-  .login-screen__password {
-    display: none;
-    position: absolute;
-    bottom: -20px;
-  }
-  .login-screen__password > span {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-  .login-screen__password input {
-    padding: 5px;
-    border: 0;
-    border-radius: 5px;
-    width: 160px;
-    height: 36px;
-    font-size: 30px;
-    box-shadow: #00489a 2px 2px 0px 0px;
-    outline: none;
-  }
-  .login-screen__password button {
-    cursor: pointer;
-    margin-left: 8px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    width: 32px;
-    height: 32px;
-    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.7) 0%, rgba(70, 161, 252, 0) 50%);
-    background-repeat: no-repeat;
-    box-shadow: 2px 2px 0px 0px #00489a, inset -1px -2px 4px 0 rgba(0, 0, 0, 0.7);
-    position: relative;
-  }
-  .login-screen__password button.login-screen__submit {
-    background-color: #3eb34d;
-  }
-  .login-screen__password button.login-screen__submit::before, .login-screen__password button.login-screen__submit::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 12px 0 12px 12px;
-    border-color: transparent transparent transparent #ffffff;
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-  }
-  .login-screen__password button.login-screen__submit::after {
-    border-width: 7px 0 7px 7px;
-    border-color: #3eb34d;
-    border-color: transparent transparent transparent #3eb34d;
-    right: 9px;
-  }
-  .login-screen__password button.login-screen__submit span {
-    background-color: #fff;
-    position: absolute;
-    height: 4px;
-    width: 17px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 9px;
-    z-index: 1;
-  }
-  .login-screen__password button.login-screen__question {
-    background-color: #0573f3;
-    font-size: 30px;
-    font-weight: 900;
-    color: #fff;
-  }
-  .login-screen__password button.login-screen__question span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 0;
-  }
-  .login-screen__password > form {
-    display: flex;
-  }
-  .login-screen__turn-off {
-    display: flex;
-    align-items: center;
-    flex-grow: 0;
-  }
-  .login-screen__turn-off:hover {
-    cursor: pointer;
-  }
-  .login-screen__turn-off span {
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  .login-screen__turn-off-icon {
-    position: relative;
-    background-color: #da5020;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    width: 32px;
-    height: 32px;
-    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.7) 0%, rgba(70, 161, 252, 0) 50%);
-  }
-  .login-screen__turn-off-icon::before, .login-screen__turn-off-icon::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .login-screen__turn-off-icon::before {
-    border: 3px solid #fff;
-    border-radius: 50px;
-    width: 14px;
-    height: 14px;
-  }
-  .login-screen__turn-off-icon::after {
-    background-color: #fff;
-    width: 3px;
-    height: 8px;
-  }
-  .welcome-text {
-    font-style: italic;
-    font-size: 76px;
-    font-weight: 900;
-    text-shadow: 3px 4px #00489a;
-  }
-  
-  .logging-in .loading-settings {
-    color: #00489a;
-    font-size: 14px;
-    font-weight: bold;
-  }
+  width: 100vw;
+  height: 100vh;
+  background-color: #508fd9;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.login-screen__top,
+.login-screen__bottom {
+  background-color: #004da3;
+  flex-basis: 12.5%;
+  border-style: solid;
+  border-image-slice: 1;
+}
+.login-screen__top {
+  border-image-source: linear-gradient(
+    90deg,
+    #004da3 0%,
+    rgba(255, 255, 255, 0.8) 30%,
+    rgba(255, 255, 255, 0.9) 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    #004da3 100%
+  );
+  border-width: 0 0 4px 0;
+}
+.login-screen__bottom {
+  padding: 40px 80px 40px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-image-source: linear-gradient(
+    90deg,
+    #004da3 0%,
+    #f09644 30%,
+    #f09644 40%,
+    #f09644 50%,
+    #004da3 100%
+  );
+  border-width: 4px 0 0 0;
+}
+.login-screen__center {
+  flex: 1;
+  display: flex;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6) -21%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 700px 700px;
+  background-position: -240px -210px;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.login-screen__instructions,
+.login-screen__accounts {
+  flex-basis: 50%;
+}
+.login-screen__instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 30px;
+  align-items: center;
+  border-right-width: 1px;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 5%,
+    rgba(255, 255, 255, 0.5) 15%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.5) 85%,
+    rgba(255, 255, 255, 0) 95%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 0 1 0 0;
+  border-right-style: solid;
+}
+.login-screen__instructions img,
+.login-screen__instructions span {
+  display: block;
+}
+.login-screen__instructions img {
+  width: 250px;
+}
+.login-screen__instructions span {
+  text-align: center;
+  font-size: 20px;
+}
 
-  .window_body_btn {
-    margin-top: 5px;
-    font-family: 'Permanent Marker', cursive;
-    cursor: pointer;
-  }
+.window-body {
+  display: flex;
+  flex-direction: column;
+  overflow: none;
+}
 
-  .window-check {
-    margin-bottom: 5px;
-  }
+.window-body1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-screen__accounts {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.login-screen__account {
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  min-width: 400px;
+  max-width: 100%;
+  opacity: 0.6;
+  padding: 12px;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid transparent;
+  border-right: 0;
+  position: relative;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+.login-screen__account-icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.login-screen__account-icon img {
+  width: 100%;
+  height: 100%;
+}
+.login-screen__account-details {
+  position: relative;
+}
+.login-screen__account-name {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: block;
+}
+.login-screen__account:hover,
+.login-screen__account.active,
+.login-screen__account.logging-in {
+  opacity: 1;
+}
+.login-screen__account:hover .login-screen__account-icon,
+.login-screen__account.active .login-screen__account-icon,
+.login-screen__account.logging-in .login-screen__account-icon {
+  border-color: #ffcc36;
+}
+.login-screen__account:hover .login-screen__account-name,
+.login-screen__account.active .login-screen__account-name,
+.login-screen__account.logging-in .login-screen__account-name {
+  margin-bottom: 2px;
+}
+.login-screen__account.active {
+  cursor: pointer;
+  background: linear-gradient(90deg, #00489a 60%, rgba(255, 255, 255, 0) 100%);
+  background-clip: padding-box;
+}
+.login-screen__account.active::after {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.6) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 8px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: -1;
+  pointer-events: none;
+}
+.login-screen__account.active .login-screen__password {
+  display: block;
+}
+.login-screen__password {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+}
+.login-screen__password > span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.login-screen__password input {
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  width: 160px;
+  height: 36px;
+  font-size: 30px;
+  box-shadow: #00489a 2px 2px 0px 0px;
+  outline: none;
+}
+.login-screen__password button {
+  cursor: pointer;
+  margin-left: 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  background-image: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(70, 161, 252, 0) 50%
+  );
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 0px 0px #00489a, inset -1px -2px 4px 0 rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.login-screen__password button.login-screen__submit {
+  background-color: #3eb34d;
+}
+.login-screen__password button.login-screen__submit::before,
+.login-screen__password button.login-screen__submit::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 0 12px 12px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}
+.login-screen__password button.login-screen__submit::after {
+  border-width: 7px 0 7px 7px;
+  border-color: #3eb34d;
+  border-color: transparent transparent transparent #3eb34d;
+  right: 9px;
+}
+.login-screen__password button.login-screen__submit span {
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 9px;
+  z-index: 1;
+}
+.login-screen__password button.login-screen__question {
+  background-color: #0573f3;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+}
+.login-screen__password button.login-screen__question span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 0;
+}
+.login-screen__password > form {
+  display: flex;
+}
+.login-screen__turn-off {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+}
+.login-screen__turn-off:hover {
+  cursor: pointer;
+}
+.login-screen__turn-off span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.login-screen__turn-off-icon {
+  position: relative;
+  background-color: #da5020;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  background-image: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(70, 161, 252, 0) 50%
+  );
+}
+.login-screen__turn-off-icon::before,
+.login-screen__turn-off-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-screen__turn-off-icon::before {
+  border: 3px solid #fff;
+  border-radius: 50px;
+  width: 14px;
+  height: 14px;
+}
+.login-screen__turn-off-icon::after {
+  background-color: #fff;
+  width: 3px;
+  height: 8px;
+}
+.welcome-text {
+  font-style: italic;
+  font-size: 76px;
+  font-weight: 900;
+  text-shadow: 3px 4px #00489a;
+}
+
+.logging-in .loading-settings {
+  color: #00489a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.window_body_btn {
+  margin-top: 5px;
+  font-family: "Permanent Marker", cursive;
+  cursor: pointer;
+}
+
+.window-check {
+  margin-bottom: 5px;
+}
+
+#quote span {
+  font-family: "Dokdo", cursive;
+  font-size: 20px;
+}

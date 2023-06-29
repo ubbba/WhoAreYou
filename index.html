@@ -42,8 +42,8 @@
             <form id="login-form" >
               <div class="window-body1">
                 <span class="window-check">To begin, click your user name</span>
-                <input class="window_name_input text" type="text" placeholder="..." maxlength="10" id="" required />
-                <button class="window_body_btn" type="submit">OK</button>
+                <input id="login-input" class="window_name_input text" type="text" placeholder="Only English" max-length="10" englishOnly required/>
+                <button class="window_body_btn" type="submit">Login</button>
               </div>
             </form>
 
@@ -148,10 +148,10 @@
       <!-- 맨 아래에 윈도우 표시와 시간 표시 -->
       <div>
 
-        <a href="#">
+        <a href="#" onclick="deleteName()">
       <div class="bottom_start">
         <img src="img/windows.png" >
-        <span>Start</span>
+        <span>Logout</span>
       </div>
     </a>
 
@@ -174,9 +174,9 @@
 
 
 
-      <script src="index.js"></script>
-      <script src="clcok.js"></script>
-      <script src="todo.js"></script>
-      <script src="quote.js"></script>
+      <script src="./js/index.js"></script>
+      <script src="./js/clcok.js"></script>
+      <script src="./js/todo.js"></script>
+      <script src="./js/quote.js"></script>
 </body>
 </html>
