@@ -30,6 +30,8 @@ const login = document.querySelector(".login");
 const main = document.querySelector(".main-all");
 const back = document.querySelector(".bottom_start");
 
+var input = document.querySelector("#input-name");
+
 function btnClick(event) {
   // 새로고침하는 기본 동작 막기
   const username = loginInput.value;
@@ -38,6 +40,7 @@ function btnClick(event) {
   login.classList.add("hidden");
   localStorage.setItem("id", username);
   paintgreet(username);
+  input.value = "";
 }
 
 // 로그인을 하게 된 이름을 가지고 인삿말 나타내기(greeting의 히든 클래스 삭제)
@@ -62,24 +65,15 @@ if (saveUser === null) {
 
 // 로그아웃 하기
 function deleteName() {
-  var input = document.querySelector("#login-input");
   localStorage.removeItem("id");
-  if (saveUser === null) {
-    // 폼 보여주기
-    login.classList.remove("hidden");
-    main.classList.add("hidden");
-    loginForm.addEventListener("submit", btnClick);
-    input.value = "";
-  } else {
-    // 유저가 있다면 폼 없애기
-    login.classList.add("hidden");
-    paintgreet(saveUser);
-  }
+  login.classList.remove("hidden");
+  main.classList.add("hidden");
+  var input = document.querySelector("#login-input");
+  input.value = "";
 }
 
 // id 영문만 입력하기
 function check1(e) {
   var name = document.querySelector("#input-name").value;
-  console.log(name);
   e.value = e.value.replace(/[^A-Za-z]/gi, "");
 }
