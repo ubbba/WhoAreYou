@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/xp.css">
-    <link rel="stylesheet" href="https://unpkg.com/xp.css@/dist/98.css">
+  
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -42,7 +42,7 @@
             <form id="login-form" >
               <div class="window-body1">
                 <span class="window-check">To begin, click your user name</span>
-                <input id="login-input" class="window_name_input text" type="text" placeholder="Only English" max-length="10" englishOnly required/>
+                <input class="window_name_input text" type="text" placeholder="Only English" maxlength="10" onkeyup="check1(this)" id="input-name" pattern="[A-Za-z]+" required/>
                 <button class="window_body_btn" type="submit">Login</button>
               </div>
             </form>

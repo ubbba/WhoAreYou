@@ -60,14 +60,7 @@ if (saveUser === null) {
   paintgreet(saveUser);
 }
 
-$(document).on("keyup", "input[englishOnly]", function () {
-  $(this).val(
-    $(this)
-      .val()
-      .replace(/^[a-zA-Z]+$/gi, "")
-  );
-});
-
+// 로그아웃 하기
 function deleteName() {
   var input = document.querySelector("#login-input");
   localStorage.removeItem("id");
@@ -82,4 +75,11 @@ function deleteName() {
     login.classList.add("hidden");
     paintgreet(saveUser);
   }
+}
+
+// id 영문만 입력하기
+function check1(e) {
+  var name = document.querySelector("#input-name").value;
+  console.log(name);
+  e.value = e.value.replace(/[^A-Za-z]/gi, "");
 }

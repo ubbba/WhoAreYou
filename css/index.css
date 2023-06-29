@@ -232,3 +232,11 @@ body {
   height: 440px;
   overflow: auto;
 }
+
+#input-name:invalid {
+  color: #0075e1;
+}
+
+#input-name::placeholder {
+  font-weight: bold;
+}
