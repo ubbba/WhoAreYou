@@ -45,7 +45,7 @@ function btnClick(event) {
 
 // 로그인을 하게 된 이름을 가지고 인삿말 나타내기(greeting의 히든 클래스 삭제)
 function paintgreet(username) {
-  greeting.innerText = `${username}`;
+  greeting.innerText = `😄 ${username}`;
   main.classList.remove("hidden");
 }
 
@@ -77,3 +77,5 @@ function check1(e) {
   var name = document.querySelector("#input-name").value;
   e.value = e.value.replace(/[^A-Za-z]/gi, "");
 }
+
+// 친구창 애니메이션
